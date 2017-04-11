@@ -28,14 +28,13 @@
             <div class="col-sm-4 note" v-for="(note, index) in notes">
                 <div class="card">
                     <div class="card-block">
-                                        <button class="close" @click="removeNote(index)">&times;</button>
+                        <button class="close" @click="removeNote(index)">&times;</button>
                         <h4 class="card-title">{{note.title}}</h4>
                         <h6 class="card-subtitle mb-2 text-muted">
                           {{note.date}}
                         </h6>
                         <p class="card-text">{{note.text}}</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -69,8 +68,8 @@
                     date: new Date(Date.now()).toLocaleString()
                 })
             },
-            removeNote(index){
-              this.notes.splice(index, 1)
+            removeNote(index) {
+                this.notes.splice(index, 1)
             }
         }
     })
